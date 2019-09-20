@@ -1,47 +1,50 @@
-package sample15;
+package sample14;
+
+
+
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class samp15 {
+public class samp14 {
+
+
 public static void main(String[] args) throws IOException
 {
 
 
 Scanner br=new Scanner(System.in);
 
-System.out.println("Enter a number");
-int number=br.nextInt();
-int temp=number;
-int sum=0;
-System.out.println("The divisors of the number are");
 
-for(int i=1;i<=number/2;i++)
+
+Scanner sc=new Scanner(System.in);
+
+System.out.println("Enter the value of n");
+long n=sc.nextInt();
+System.out.println("Enter the value of r");
+int r=sc.nextInt();
+long n1=1,r1=1,n2=0,n3=1,a=0,i;
+for(i=1;i<=n;i++)
 {
-if(number%i==0)
+n1=n1*i;
 
+}
+
+for(i=1;i<=r;i++)
 {
-System.out.println(i+"");
-sum+=i;
-}
+r1=r1*i;
 }
 
-System.out.println("The sum of the divisors are"+sum);
-
-
-if(temp==sum)
+n2=n-r;
+for(i=1;i<=n2;i++)
 {
-System.out.println("It is a perfect number");
+n3=n3*i;
 }
-else
-{
-System.out.println("It is not a perfect number");
-
-}
-
-
-
-
+a=(n1/(r1*n3));
+System.out.println("The NCR factor for given values is "+a);
 
 }
+
 }
+
+
